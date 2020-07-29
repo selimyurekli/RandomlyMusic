@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  padding : 0;
+  margin :0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html body{
+  background: linear-gradient(to left,#3d034b ,	#204b77,#b04200);;
+  height: 100%;
+  width: 100%;
+  
+  
+}
+
+header{
+  position: relative  ;
+  z-index : 999;
+  width: 100%;
+  height: 8%;
+  background-image:url("../img/navbar_image5.jpg");
+  display: flex;
+  font-family: Montserrat, "sans-serif";
+  font-weight: 500; 
+  justify-content: space-between;
+  align-content: center;
+  
+  
+}
+
+.nav-bar{
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+.nav-bar ul{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+.nav-bar li{
+  position: relative;
+  top:0;
+  display: inline-block;
+  padding: 7px 10px;
+}
+.nav-bar li a{
+  color: white;
+  text-shadow: 0.5px 0.5px;
+}
+.nav-bar li a:hover{
+    transition-delay: 15ms;
+    transition-duration: 0.5s;
+    color: #954a5e;
+    text-decoration: none;
+}
+.logo{
+  margin-right:700px ;
+}
+.other{
+  
+}
+.nav-bar .icon {
+  display: none;
+}
+.nav-bar .icon:hover i{
+  transition-delay: 15ms;
+    transition-duration: 0.5s;
+    color: #954a5e;
+    text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .nav-bar a {display: none;}
+  .nav-bar #toLeft {
+    float: right;
+    text-align: center;
+    padding-right:50px;
+  
+  }
+  .nav-bar a.icon{
+    display: block;
+    
+
+  }
+}
+@media screen and (max-width: 767px) {
+  .responsive {
+    position: relative;
+    
+  }
+  .responsive .icon {
+    position: absolute;
+    top: 17px;
+    right: 50px;
+    
+  }
+  
+  .nav-bar.responsive ul{
+  
+    display: block;
+    text-align: left;
+  }
+  .nav-bar.responsive ul li{
+    background-color: purple;
+    display: block;
+    text-align: left;
+  }
+  .nav-bar.responsive ul li a{
+    background-color: purple;
+    display: block;
+    text-align: left;
+  }
+  .nav-bar.responsive ul #toLeft{
+    background: transparent;
+  }
+}
+
+
+
+
+
+#content{
+  z-index: -1;
+}
+
+.wrapper {
+ 
+  max-width: 100%;
+  margin-top: 0.5%;
+  margin-right: 0.2%;
+  margin-left: 0.2%;
+  
+}
+.card {
+  columns: 1;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 324px) {  
+  .card {
+  columns: 1;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 768px) {  
+  .card {
+    columns: 3;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    columns: 4;
+  }
+}
+.card-item {
+  font-family: futura-pt, sans-serif;
+  text-align: center;
+  /*isplay: inline-block;*/ 
+  border-radius: 8px;
+  max-width: 100%;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+  transition: 0.25s ease-in-out;
+
+  padding: 5px;
+ 
+}
+.card-item:hover {
+
+  cursor: pointer;
+  padding: 10%;
+  
+}
+.card-item:before{
+  
+  position: absolute;
+  top: 0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  
+  content: "";
+  display: block;
+  z-index:2;
+  transition: 0.5s all;
+  /*background: linear-gradient(to bottom, 	rgb(109, 27, 136),rgb(229, 53, 219),rgb(169, 80, 221), rgb(155, 13, 97));*/
+  /*background: linear-gradient(to bottom, 	#4e025f ,#e181f7);*/
+  background: linear-gradient(to bottom,#3d034b ,	#204b77,#b04200);;
+  opacity: 0;
+  
+}
+.card-item:hover:before{
+  opacity: 0.65;
+}
+.card-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-item .card-info{
+    text-align: center ;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    padding-top: 30%;
+    display:block;
+    color: white;
+    /*text-shadow: 0.5px 0.5px;*/
+    z-index: 3;
+    transition: 0.5s all;
+    opacity: 0;
+    
+
+}
+.music-name,.music-singer ,.music-category{
+    padding: 5px;
+}
+
+.card-item:hover .card-info{
+  opacity: 1;
+  
+}
+.card-content {
+  border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+.btn{
+  border: 1px solid transparent;
+  background-color: #3498db;
+  color: white;
+  font-family: "Montserrat";
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  background-color: white;
+  color:#3498db;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fas {
+  align-items: center;
+  padding: 10px;
+  font-size: 24px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 2px;
+  border-radius: 50%;
+}
+.fas:hover {
+  opacity: 0.7;
+}
+.fas-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fas-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fas-instagram {
+  background: #125688;
+  color: white;
+}
+.fas-github {
+  background: #55ACEE;
+  color: white;
+}
